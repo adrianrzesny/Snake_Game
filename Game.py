@@ -84,7 +84,7 @@ while game_works:
     #Draw background
     screen.blit(background, (0,0))
 
-    #sprawdź czy koniec gry
+    #Check if the game is over
     if snake.check_collision():
         text_game_over = font_game_over.render('GAME OVER', False, (200,0,0))
         screen.blit(text_game_over, (WIDTH_SCREEN/2-200, HEIGHT_SCREEN/2-60))
