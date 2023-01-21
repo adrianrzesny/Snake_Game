@@ -6,12 +6,11 @@ class Segment(pygame.sprite.Sprite):
         super(Segment, self).__init__()
         self.image = pygame.image.load("images/segment.png")
         self.position = pygame.Rect(-32, -32, 32, 32)
-        self.last_position = None
-        pass
+        self.last_position = None        
 
     def move(self, new_position):
         self.last_position = copy.deepcopy(self.position)
         self.position = copy.deepcopy(new_position)
-        pass
+        
 
-    pass
+    

@@ -21,9 +21,7 @@ for i in range(25):
         mask = (random.randrange(0,20), random.randrange(0, 20), random.randrange(0,20))
 
         image.fill(mask, special_flags=pygame.BLEND_ADD)
-        background.blit(image, (i*32, j*32))
-        pass
-    pass
+        background.blit(image, (i*32, j*32))  
 
 #Settings pygame 
 pygame.init()
@@ -48,28 +46,24 @@ while game_works:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 game_works = False
-                pass
+                
             if event.key == pygame.K_w:
                 snake.change_direction(Direction.UP)
-                pass
+                
             if event.key == pygame.K_s:
                 snake.change_direction(Direction.DOWN)
-                pass
+                
             if event.key == pygame.K_a:
                 snake.change_direction(Direction.LEFT)
-                pass
+                
             if event.key == pygame.K_d:
                 snake.change_direction(Direction.RIGHT)
-                pass
 
         elif event.type == MOVE_SNAKE_EVENT:
             snake.update()
-            pass 
 
         elif event.type == pygame.QUIT:
             game_works = False
-            pass
-        pass
 
     #Checking if the snake's head is on the bonus
     collision_with_bonus = pygame.sprite.spritecollideany(snake, bonuses)
@@ -79,8 +73,7 @@ while game_works:
         snake.collect_bonus()
         bonus = Bonus()
         bonuses.add(bonus)
-        pass
-
+        
     #Draw background
     screen.blit(background, (0,0))
 

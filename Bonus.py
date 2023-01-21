@@ -7,6 +7,6 @@ class Bonus(pygame.sprite.Sprite):
         self.image = pygame.image.load("images/bonus.png")
         random_position = pygame.Rect(random.randrange(1,25)*32, random.randrange(1,19)*32, 32, 32)
         self.rect = random_position
-        pass
-    pass
+        
+    
 
